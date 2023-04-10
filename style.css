@@ -181,8 +181,8 @@ nav a {
 	color: white;
 }
 
-.navOne_change {
-	color: white;
+.navOne_change, .navTwo_change {
+	color: white !important;
 }
 
 .underline_change {
@@ -243,9 +243,11 @@ nav a {
 	border-bottom: 2px solid var(--cream);
 }
 
-#button_cntr h3:hover {
-	transform: translateY(-.5rem);
-	border-bottom: 2px solid #222;
+
+
+.content #desktop_btn {
+	border-bottom: 1.5px solid #222 ;
+	transform: translateY(-.7rem);
 }
 
 .text, .content {
@@ -370,6 +372,10 @@ nav a {
 	height: fit-content;
 	width: 100%;
 	overflow: hidden;
+}
+
+#Sec3 h2{
+	padding: 0 2rem;
 }
 
 #Sec3 .secheading {
@@ -792,10 +798,6 @@ nav a {
 		transform: translateX(-110%);
 	}
 
-	#nav_cntr a {
-		color: #F7C66F;
-	}
-
 	#Sec2 {
 		box-sizing: content-box;
 		padding: 5rem 0;
@@ -848,7 +850,7 @@ nav a {
 	}
 
 	#alert{
-		height: 60%;
+		height: 70%;
 	}
 
 	#alrt_btn {

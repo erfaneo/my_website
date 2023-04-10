@@ -39,12 +39,13 @@ btn.addEventListener("click", ()=> {
 
 //NavOne change
 var nav_a = document.querySelectorAll("#navOne a")
+var nav_two_a = document.querySelectorAll("#navTwo a")
 var underlines = document.querySelectorAll(".underline")
 var section = document.querySelectorAll("section")
 var div = document.querySelectorAll(".underline")
 window.addEventListener("scroll", () => {
 	section.forEach((items, i) => {
-		if (items.offsetTop < window.pageYOffset +300) {
+		if (items.offsetTop < window.pageYOffset +500) {
 			nav_a.forEach( items => {
 				items.classList.remove("navOne_change")
 			})
@@ -53,6 +54,17 @@ window.addEventListener("scroll", () => {
 			})
 			nav_a[i].classList.add("navOne_change")
 			div[i].classList.add("underline_change")
+		}
+	})
+})
+
+window.addEventListener("scroll", () => {
+	section.forEach((items, i) => {
+		if (items.offsetTop < window.pageYOffset +500) {
+			nav_two_a.forEach( items => {
+				items.classList.remove("navTwo_change")
+			})
+			nav_two_a[i].classList.add("navTwo_change")
 		}
 	})
 })
@@ -71,6 +83,10 @@ var box_cntr = document.querySelector("#box_cntr")
 var cam = document.querySelector("#cam")
 mob_btn.addEventListener("click", ()=> {
 	device.classList.add("responsive")
+	mob_btn.style.transform ="translateY(-.7rem)"
+	mob_btn.style.borderBottom = "1.5px solid #222"
+	desktop_btn.style.transform ="translateY(0)"
+	desktop_btn.style.borderBottom = "none"
 	 box3.style.flexFlow = " column nowrap"
 	 box3.style.width = "100%"
 	 box4.style.width = "100%"
@@ -80,10 +96,13 @@ mob_btn.addEventListener("click", ()=> {
 	 box2.style.height = "20%"
 	 cam.style.top = "101.5%"
 	 cam.style.borderRadius = "3px"
-
 })
 desktop_btn.addEventListener("click", () => {
 	device.classList.remove("responsive")
+	mob_btn.style.transform ="translateY(0rem)"
+	mob_btn.style.borderBottom = "0"
+	desktop_btn.style.transform ="translateY(-.7rem)"
+	desktop_btn.style.borderBottom = "1.5px solid #222"
 	box3.style.flexFlow = " row wrap"
 	box5.style.width = "50%"
 	box4.style.width = "50%"
